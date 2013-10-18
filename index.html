@@ -29,11 +29,15 @@
         <li>{{name}}: {{id}}</li>
       {{/each}}
     </ul>
+
+    <div>
+      {{outlet}}
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="character">
-    <label for="name">Name</label> <input id="name" name="name">
-    <label for="xp">XP</label> <input name="xp" id="xp" type="number" min="0">
+    <label for="name">Name</label> <input id="name" name="name" {{bindAttr value="name"}}>
+    <label for="xp">XP</label> <input name="xp" id="xp" type="number" min="0" {{bindAttr value="xp"}}>
   </script>
 
 

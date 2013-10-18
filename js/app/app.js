@@ -22,12 +22,7 @@ IK.CharactersRoute = Ember.Route.extend({
 
 IK.CharacterRoute = Ember.Route.extend({
   model: function (params) {
-  	console.log("Character root", params, this);
-  	console.log("Store", this.store);
-  	console.log("Character", this.store.find('character', 2).then(function (character) {
-  		console.log(character.get('name'));
-  	}));
-    return this.store.find('character');
+  	return this.store.find('character', params.character_id);
   }
 });
 
