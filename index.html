@@ -36,8 +36,10 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="character">
-    <label for="name">Name</label> <input id="name" name="name" {{bindAttr value="name"}}>
-    <label for="xp">XP</label> <input name="xp" id="xp" type="number" min="0" {{bindAttr value="xp"}}>
+
+    <label for="name">Name</label> {{input id="name" name="name" value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    <label for="race">Race</label> {{input id="race" name="race" value=race focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    <label for="xp">XP</label> {{input type="number" id="number" value=xp focus-out="acceptChanges" insert-newline="acceptChanges"}}
   </script>
 
 
@@ -48,6 +50,7 @@
   <script src="js/app/app.js"></script>
   <script src="js/app/controllers/controllers.js"></script>
   <script src="js/app/models/models.js"></script>
+  <script src="js/app/models/views.js"></script>
 
 
 
