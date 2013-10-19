@@ -4,14 +4,25 @@ html, body {
 }
 
 #display-character {
+
+	line-height: 1.1;
+
+	#about > div {
+		display: flex;
+	    flex-direction: row;
+	    align-items: stretch;
+	}
+
 	.undertitle {
 		display: inline-block;
 		padding: 4px;
+		flex: 1;
 	}
 
 	.undertitle .value {
 		display: block;
 		border-bottom: solid black 1px;
+		min-height: 1.1em;
 	}
 
 	.undertitle .label {

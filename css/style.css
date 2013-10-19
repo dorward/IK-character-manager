@@ -2,15 +2,23 @@
 html, body {
   margin: 20px; }
 
-#display-character .undertitle {
-  display: inline-block;
-  padding: 4px; }
-#display-character .undertitle .value {
-  display: block;
-  border-bottom: solid black 1px; }
-#display-character .undertitle .label {
-  font-size: 0.8em;
-  text-transform: uppercase; }
+#display-character {
+  line-height: 1.1; }
+  #display-character #about > div {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; }
+  #display-character .undertitle {
+    display: inline-block;
+    padding: 4px;
+    flex: 1; }
+  #display-character .undertitle .value {
+    display: block;
+    border-bottom: solid black 1px;
+    min-height: 1.1em; }
+  #display-character .undertitle .label {
+    font-size: 0.8em;
+    text-transform: uppercase; }
 
 /* Edit Character */
 label {
