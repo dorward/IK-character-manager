@@ -8,3 +8,9 @@ IK.EditView = Ember.View.extend({
 	tagName: "div",
 	classNames: ["form-control"]
 });
+
+IK.UnderTitleView = Ember.View.extend({
+	templateName: "undertitle",
+	tagName: "div",
+	classNames: ["undertitle"]
+});

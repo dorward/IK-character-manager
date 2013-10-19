@@ -36,12 +36,35 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="character">
+    <div id="display-character">
+      <div class="edit-link">{{#link-to 'editcharacter' this}}Edit{{/link-to}}</div>
+      <div id="about">
+        <div>
+          {{view IK.UnderTitleView valueBinding=name label="Name"}}
+          {{view IK.UnderTitleView valueBinding=sex label="Sex"}}
+          {{view IK.UnderTitleView valueBinding=characteristics label="Definining Characteristic(s)"}}
+          {{view IK.UnderTitleView valueBinding=weight label="Weight"}}
+        </div>
+        <div>
+          {{view IK.UnderTitleView valueBinding=archetype label="Archetype"}}
+          {{view IK.UnderTitleView valueBinding=race label="Race"}}
+          {{view IK.UnderTitleView valueBinding=careers label="Careers"}}
+          {{view IK.UnderTitleView valueBinding=faith label="Faith"}}
+          {{view IK.UnderTitleView valueBinding=player label="Player name"}}
+          {{view IK.UnderTitleView valueBinding=height label="Height"}}
+        </div>
+      </div>
+    </div>
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="editcharacter">
     <div id="about">
 
       {{view IK.EditView identifier="name" label="Name" valueBinding=name}}
+      {{view IK.EditView identifier="sex" label="Sex" valueBinding=sex}}
       {{view IK.EditView identifier="archetype" label="Archetype" valueBinding=archetype}}
       {{view IK.EditView identifier="characteristics" label="Characteristics" valueBinding=characteristics}}
-      {{view IK.EditView identifier="sex" label="Sex" valueBinding=sex}}
       {{view IK.EditView identifier="faith" label="Faith" valueBinding=faith}}
       {{view IK.EditView identifier="player" label="Player" valueBinding=player}}
       {{view IK.EditView identifier="weight" label="Weight" valueBinding=weight}}
@@ -54,6 +77,7 @@
 
   </script>
 
+
   <script type="text/x-handlebars" data-template-name="edit">
       <label {{bind-attr for=view.identifier}}>{{view.label}}</label>
       {{input
@@ -63,6 +87,12 @@
         value=view.value
         focus-out="acceptChanges"
         insert-newline="acceptChanges"}}
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="undertitle">
+    <span class="value">{{view.value}}</span>
+    <span class="label">{{view.label}}</span>
   </script>
 
 

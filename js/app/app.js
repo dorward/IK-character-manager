@@ -11,6 +11,7 @@ IK.Router.map(function () {
   //this.resource('characters', { path: '/' });
   this.resource('characters', { path: "/" }, function () {
   	this.resource('character', { path: "/:character_id"});
+    this.resource('editcharacter', { path: "/edit/:character_id"});
   });
 });
 
@@ -22,7 +23,13 @@ IK.CharactersRoute = Ember.Route.extend({
 
 IK.CharacterRoute = Ember.Route.extend({
   model: function (params) {
-  	return this.store.find('character', params.character_id);
+    return this.store.find('character', params.character_id);
+  }
+});
+
+IK.EditCharacterRoute = Ember.Route.extend({
+  model: function (params) {
+    return this.store.find('character', params.character_id);
   }
 });
 
