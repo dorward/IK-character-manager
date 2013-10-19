@@ -7,16 +7,33 @@ html, body {
 
 	line-height: 1.1;
 
-	#about > div {
+	.row, #about {
 		display: flex;
 	    flex-direction: row;
-	    align-items: stretch;
+	    align-items: baseline;
+	}
+
+	.main {
+		flex: auto;
+	}
+
+	#level-xp {
+		border: solid black 2px;
+		border-radius: 1em;
+	}
+
+	#level-xp, #height-weight {
+		width: 10ex;
+		.undertitle {
+			display: block;
+			text-align: center;
+		}
 	}
 
 	.undertitle {
 		display: inline-block;
 		padding: 4px;
-		flex: 1;
+		flex: auto;
 	}
 
 	.undertitle .value {

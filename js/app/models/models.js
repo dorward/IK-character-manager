@@ -26,8 +26,8 @@ IK.Character.FIXTURES = [
         characteristics: "Silver Shield badge tatooed over heart",
         sex: "Male",
         faith: "Morrow",
-        weight: "",
-        height: "",
+        weight: "140lbs",
+        height: "6'1\"",
         careers: "Thief - Spy"
 	},
 	{

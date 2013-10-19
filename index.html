@@ -39,25 +39,30 @@
     <div id="display-character">
       <div class="edit-link">{{#link-to 'editcharacter' this}}Edit{{/link-to}}</div>
       <div id="about">
-        <div>
-          {{view IK.UnderTitleView valueBinding=name label="Name"}}
-          {{view IK.UnderTitleView valueBinding=sex label="Sex"}}
-          {{view IK.UnderTitleView valueBinding=characteristics label="Definining Characteristic(s)"}}
-          {{view IK.UnderTitleView valueBinding=weight label="Weight"}}
+        <div class="main">
+          <div class="row">
+            {{view IK.UnderTitleView valueBinding=name label="Name"}}
+            {{view IK.UnderTitleView valueBinding=sex label="Sex"}}
+            {{view IK.UnderTitleView valueBinding=characteristics label="Definining Characteristic(s)"}}
+          </div>
+          <div class="row">
+            {{view IK.UnderTitleView valueBinding=archetype label="Archetype"}}
+            {{view IK.UnderTitleView valueBinding=race label="Race"}}
+            {{view IK.UnderTitleView valueBinding=careers label="Careers"}}
+            {{view IK.UnderTitleView valueBinding=faith label="Faith"}}
+            {{view IK.UnderTitleView valueBinding=player label="Player name"}}
+          </div>
         </div>
-        <div>
-          {{view IK.UnderTitleView valueBinding=archetype label="Archetype"}}
-          {{view IK.UnderTitleView valueBinding=race label="Race"}}
-          {{view IK.UnderTitleView valueBinding=careers label="Careers"}}
-          {{view IK.UnderTitleView valueBinding=faith label="Faith"}}
-          {{view IK.UnderTitleView valueBinding=player label="Player name"}}
+        <div id="height-weight">
+          {{view IK.UnderTitleView valueBinding=weight label="Weight"}}
           {{view IK.UnderTitleView valueBinding=height label="Height"}}
         </div>
+        <div id="level-xp">
+          {{view IK.UnderTitleView valueBinding=view.level label="Level"}}
+          {{view IK.UnderTitleView valueBinding=xp label="XP"}}
+        </div>
       </div>
-      <div id="level-xp">
-        {{view IK.UnderTitleView valueBinding=view.level label="Level"}}
-        {{view IK.UnderTitleView valueBinding=xp label="XP"}}
-      </div>
+
     </div>
 
   </script>

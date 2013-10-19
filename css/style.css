@@ -4,14 +4,24 @@ html, body {
 
 #display-character {
   line-height: 1.1; }
-  #display-character #about > div {
+  #display-character .row, #display-character #about {
     display: flex;
     flex-direction: row;
-    align-items: stretch; }
+    align-items: baseline; }
+  #display-character .main {
+    flex: auto; }
+  #display-character #level-xp {
+    border: solid black 2px;
+    border-radius: 1em; }
+  #display-character #level-xp, #display-character #height-weight {
+    width: 10ex; }
+    #display-character #level-xp .undertitle, #display-character #height-weight .undertitle {
+      display: block;
+      text-align: center; }
   #display-character .undertitle {
     display: inline-block;
     padding: 4px;
-    flex: 1; }
+    flex: auto; }
   #display-character .undertitle .value {
     display: block;
     border-bottom: solid black 1px;
