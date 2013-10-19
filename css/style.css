@@ -2,3 +2,8 @@
 html, body {
     margin: 20px;
 }
+
+label {
+	display: inline-block;
+	width: 8em;
+}
