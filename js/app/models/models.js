@@ -4,7 +4,14 @@
 IK.Character = DS.Model.extend({
     name: DS.attr('string'),
     race: DS.attr('string'),
-    xp: DS.attr('number')
+    xp: DS.attr('number'),
+    archetype: DS.attr('string'),
+    characteristics: DS.attr('string'),
+    sex: DS.attr('string'),
+    faith: DS.attr('string'),
+    weight: DS.attr('string'),
+    height: DS.attr('string'),
+    careers: DS.attr('string')
 });
 
 IK.Character.FIXTURES = [

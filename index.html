@@ -36,11 +36,35 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="character">
+    <div id="about">
 
-    <label for="name">Name</label> {{input id="name" name="name" value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
-    <label for="race">Race</label> {{input id="race" name="race" value=race focus-out="acceptChanges" insert-newline="acceptChanges"}}
-    <label for="xp">XP</label> {{input type="number" id="number" value=xp focus-out="acceptChanges" insert-newline="acceptChanges"}}
+      {{view IK.EditView identifier="name" label="Name" valueBinding=name}}
+      {{view IK.EditView identifier="archetype" label="Archetype" valueBinding=archetype}}
+      {{view IK.EditView identifier="characteristics" label="Characteristics" valueBinding=characteristics}}
+      {{view IK.EditView identifier="sex" label="Sex" valueBinding=sex}}
+      {{view IK.EditView identifier="faith" label="Faith" valueBinding=faith}}
+      {{view IK.EditView identifier="player" label="Player" valueBinding=player}}
+      {{view IK.EditView identifier="weight" label="Weight" valueBinding=weight}}
+      {{view IK.EditView identifier="height" label="Height" valueBinding=height}}
+      {{view IK.EditView identifier="race" label="Race" valueBinding=race}}
+      {{view IK.EditView identifier="careers" label="Careers" valueBinding=careers}}
+      {{view IK.EditView identifier="xp" label="XP" valueBinding=xp inputType="number"}}
+
+    </div>
+
   </script>
+
+  <script type="text/x-handlebars" data-template-name="edit">
+      <label {{bind-attr for=view.identifier}}>{{view.label}}</label>
+      {{input
+        typeBinding=view.inputType
+        id=view.identifier
+        name=view.identifier
+        value=view.value
+        focus-out="acceptChanges"
+        insert-newline="acceptChanges"}}
+  </script>
+
 
 
   <script src="js/libs/jquery-1.9.1.js"></script>
@@ -50,7 +74,7 @@
   <script src="js/app/app.js"></script>
   <script src="js/app/controllers/controllers.js"></script>
   <script src="js/app/models/models.js"></script>
-  <script src="js/app/models/views.js"></script>
+  <script src="js/app/views/views.js"></script>
 
 
 
