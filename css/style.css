@@ -29,6 +29,20 @@ html, body {
   #display-character .undertitle .label {
     font-size: 0.8em;
     text-transform: uppercase; }
+  #display-character #stats .stat-trio > .stat:first-of-type {
+    font-size: 150%; }
+  #display-character #stats .stat {
+    text-align: center;
+    display: inline-flex;
+    vertical-align: middle;
+    flex-direction: column-reverse;
+    min-width: 1.5em;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 0.5em;
+    border: solid black 1px; }
+    #display-character #stats .stat .key {
+      font-size: 70%; }
 
 /* Edit Character */
 label {

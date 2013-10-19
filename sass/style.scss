@@ -46,6 +46,28 @@ html, body {
 		font-size: 0.8em;
 		text-transform: uppercase;
 	}
+
+	#stats {
+		.stat-trio > .stat:first-of-type {
+			font-size: 150%;
+		}
+
+		.stat {
+			text-align: center;
+			display: inline-flex;
+			vertical-align: middle;
+			flex-direction: column-reverse;
+			min-width: 1.5em;
+			padding: 3px;
+			margin: 3px;
+			border-radius: 0.5em;
+			border: solid black 1px;
+
+			.key {
+				font-size: 70%;
+			}
+		}
+	}
 }
 
 

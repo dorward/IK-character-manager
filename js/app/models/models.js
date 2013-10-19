@@ -12,7 +12,17 @@ IK.Character = DS.Model.extend({
     faith: DS.attr('string'),
     weight: DS.attr('string'),
     height: DS.attr('string'),
-    careers: DS.attr('string')
+    careers: DS.attr('string'),
+
+    "phy": DS.attr('number'),
+    "spd": DS.attr('number'),
+    "str": DS.attr('number'),
+    "agi": DS.attr('number'),
+    "prw": DS.attr('number'),
+    "poi": DS.attr('number'),
+    "int": DS.attr('number'),
+    "arc": DS.attr('number'),
+    "per": DS.attr('number')
 });
 
 IK.Character.FIXTURES = [
@@ -28,7 +38,16 @@ IK.Character.FIXTURES = [
         faith: "Morrow",
         weight: "140lbs",
         height: "6'1\"",
-        careers: "Thief - Spy"
+        careers: "Thief - Spy",
+        "phy": 1,
+        "spd": 2,
+        "str": 3,
+        "agi": 4,
+        "prw": 5,
+        "poi": 6,
+        "int": 7,
+        "arc": 8,
+        "per": 9
 	},
 	{
 		id: 2,
@@ -42,6 +61,15 @@ IK.Character.FIXTURES = [
         faith: "Morrow",
         weight: "",
         height: "",
-        careers: "Bounty Hunter - Pistoleer"
+        careers: "Bounty Hunter - Pistoleer",
+        "phy": 9,
+        "spd": 8,
+        "str": 7,
+        "agi": 6,
+        "prw": 5,
+        "poi": 4,
+        "int": 3,
+        "arc": 2,
+        "per": 1
 	}
 ];

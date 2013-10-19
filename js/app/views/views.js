@@ -31,3 +31,15 @@ IK.CharacterView = Ember.View.extend({
 	}.property("xp")
 });
 
+IK.StatTrioView = Ember.View.extend({
+	classNames: ['stat-trio'],
+	templateName: "stattrio",
+	pairs: function () {
+		var arr = this.get('values').split(',');
+		var c = this.get('character');
+		for (var i = 0; i < arr.length; i++) {
+			arr[i] = { key: arr[i], value: c.get(arr[i].toLowerCase()) };
+		}
+		return arr;
+	}.property('values', 'character.model')
+});

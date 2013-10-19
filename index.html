@@ -37,7 +37,9 @@
 
   <script type="text/x-handlebars" data-template-name="character">
     <div id="display-character">
+
       <div class="edit-link">{{#link-to 'editcharacter' this}}Edit{{/link-to}}</div>
+
       <div id="about">
         <div class="main">
           <div class="row">
@@ -61,6 +63,12 @@
           {{view IK.UnderTitleView valueBinding=view.level label="Level"}}
           {{view IK.UnderTitleView valueBinding=xp label="XP"}}
         </div>
+      </div>
+
+      <div id="stats">
+        {{view IK.StatTrioView values="Phy,Spd,Str" characterBinding=this}}
+        {{view IK.StatTrioView values="Agi,Prw,Poi" characterBinding=this}}
+        {{view IK.StatTrioView values="Int,Arc,Per" characterBinding=this}}
       </div>
 
     </div>
@@ -102,6 +110,15 @@
   <script type="text/x-handlebars" data-template-name="undertitle">
     <span class="value">{{view.value}}</span>
     <span class="label">{{view.label}}</span>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="stattrio">
+    {{#each view.pairs}}
+    <div class="stat">
+      <span class="key">{{key}}</span>
+      <span class="value">{{value}}</span>
+    </div>
+    {{/each}}
   </script>
 
 
