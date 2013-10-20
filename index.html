@@ -25,6 +25,7 @@
 
   <script type="text/x-handlebars" data-template-name="characters">
     <ul>
+        <li><button {{action "newCharacter"}}>New Character</button></li>
       {{#each}}
         <li>{{#link-to 'character' this}}{{name}}{{/link-to}}</li>
       {{/each}}

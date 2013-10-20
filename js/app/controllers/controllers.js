@@ -5,7 +5,16 @@
 // });
 
 IK.CharactersController = Ember.ArrayController.extend({
-	content: []
+	content: [],
+	actions: {
+		newCharacter: function () {
+			var character = this.store.createRecord('character', {
+        		name: "Unnamed character",
+      		});
+      		character.save();
+      		this.target.transitionTo('editcharacter', character);
+		}
+	}
 });
 
 IK.CharacterController = Ember.ObjectController.extend({
