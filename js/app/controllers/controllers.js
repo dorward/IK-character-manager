@@ -17,7 +17,7 @@ IK.CharactersController = Ember.ArrayController.extend({
 	}
 });
 
-IK.CharacterController = Ember.ObjectController.extend({
+IK.EditcharacterController = Ember.ObjectController.extend({
 	actions: {
 		acceptChanges: function () {
 			console.log(this.get('model'));
