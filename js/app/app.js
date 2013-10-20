@@ -4,8 +4,10 @@ IK = Em.Application.create({
 	LOG_TRANSITIONS: true
 });
 
-IK.ApplicationAdapter = DS.FixtureAdapter.extend();
-
+//IK.ApplicationAdapter = DS.FixtureAdapter.extend();
+IK.ApplicationAdapter = DS.LSAdapter.extend({
+  namespace: 'IronKingdoms'
+});
 
 IK.Router.map(function () {
   //this.resource('characters', { path: '/' });
