@@ -3,6 +3,15 @@
 
 // Ember.Handlebars.helper('input', IK.InputView);
 
+IK.LinkToSheet = Ember.View.extend({
+	templateName: "link-to-sheet",
+	tagName: "li",
+	display_name: function () {
+        var n = this.get('character.name');
+        return has_word_characters.test("" + n) ? n : "Unnamed character";
+    }.property('character.name'),
+});
+
 IK.EditView = Ember.View.extend({
 	templateName: "edit",
 	tagName: "div",

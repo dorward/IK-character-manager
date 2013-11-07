@@ -4,10 +4,6 @@ var has_word_characters = /\w/;
 
 // TODO: Add Ember-Data
 IK.Character = DS.Model.extend({
-    display_name: function () {
-        var n = this.get('name');
-        return has_word_characters.test("" + n) ? n : "Unnamed character";
-    }.property('name'),
     name: DS.attr('string', {
         // Default value provided for the benefit of the `display_name` observer
         defaultValue: ""
