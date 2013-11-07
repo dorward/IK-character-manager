@@ -1,8 +1,13 @@
 /*globals IronKingdoms, Ember*/
 
+var has_word_characters = /\w/;
+
 // TODO: Add Ember-Data
 IK.Character = DS.Model.extend({
-    name: DS.attr('string'),
+    name: DS.attr('string', {
+        // Default value provided for the benefit of the `display_name` observer
+        defaultValue: ""
+    }),
     player: DS.attr('string'),
     race: DS.attr('string'),
     xp: DS.attr('number'),

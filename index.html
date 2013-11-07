@@ -26,14 +26,16 @@
   <script type="text/x-handlebars" data-template-name="characters">
     <ul>
         <li><button {{action "newCharacter"}}>New Character</button></li>
-      {{#each}}
-        <li>{{#link-to 'character' this}}{{name}}{{/link-to}}</li>
-      {{/each}}
+        {{#each}}{{view IK.LinkToSheet characterBinding=this}}{{/each}}
     </ul>
 
     <div>
       {{outlet}}
     </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="link-to-sheet">
+    {{#link-to 'character' view.character}}{{view.display_name}}{{/link-to}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="character">
