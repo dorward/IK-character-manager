@@ -96,17 +96,17 @@
     </div>
 
     <div id="stats">
-      {{view IK.EditView identifier="phy" label="Phy" valueBinding=phy type="number"}}
-      {{view IK.EditView identifier="spd" label="Spd" valueBinding=spd type="number"}}
-      {{view IK.EditView identifier="str" label="Str" valueBinding=str type="number"}}
+      {{view IK.EditNumberView identifier="phy" label="Phy" valueBinding=phy}}
+      {{view IK.EditNumberView identifier="spd" label="Spd" valueBinding=spd}}
+      {{view IK.EditNumberView identifier="str" label="Str" valueBinding=str}}
 
-      {{view IK.EditView identifier="agi" label="Agi" valueBinding=agi type="number"}}
-      {{view IK.EditView identifier="prw" label="Prw" valueBinding=prw type="number"}}
-      {{view IK.EditView identifier="poi" label="Poi" valueBinding=poi type="number"}}
+      {{view IK.EditNumberView identifier="agi" label="Agi" valueBinding=agi}}
+      {{view IK.EditNumberView identifier="prw" label="Prw" valueBinding=prw}}
+      {{view IK.EditNumberView identifier="poi" label="Poi" valueBinding=poi}}
 
-      {{view IK.EditView identifier="int" label="Int" valueBinding=int type="number"}}
-      {{view IK.EditView identifier="arc" label="Arc" valueBinding=arc type="number"}}
-      {{view IK.EditView identifier="per" label="Per" valueBinding=per type="number"}}
+      {{view IK.EditNumberView identifier="int" label="Int" valueBinding=int}}
+      {{view IK.EditNumberView identifier="arc" label="Arc" valueBinding=arc}}
+      {{view IK.EditNumberView identifier="per" label="Per" valueBinding=per}}
     </div>
 
   </script>
@@ -115,7 +115,18 @@
   <script type="text/x-handlebars" data-template-name="edit">
       <label {{bind-attr for=view.identifier}}>{{view.label}}</label>
       {{input
-        typeBinding=view.inputType
+        type="text"
+        id=view.identifier
+        name=view.identifier
+        value=view.value
+        focus-out="acceptChanges"
+        insert-newline="acceptChanges"}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="edit-number">
+      <label {{bind-attr for=view.identifier}}>{{view.label}}</label>
+      {{input
+        type="number"
         id=view.identifier
         name=view.identifier
         value=view.value

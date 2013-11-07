@@ -15,6 +15,11 @@ IK.EditView = Ember.View.extend({
 	classNames: ["form-control"]
 });
 
+// Why {{input}} doesn't support property binding for type I've no idea. IE I suspect.
+IK.EditNumberView = IK.EditView.extend({
+	templateName: "edit-number"
+});
+
 IK.UnderTitleView = Ember.View.extend({
 	templateName: "undertitle",
 	tagName: "div",
