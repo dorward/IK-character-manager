@@ -8,9 +8,7 @@ IK.CharactersController = Ember.ArrayController.extend({
 	content: [],
 	actions: {
 		newCharacter: function () {
-			var character = this.store.createRecord('character', {
-        		name: "Unnamed character",
-      		});
+			var character = this.store.createRecord('character');
       		character.save();
       		this.target.transitionTo('editcharacter', character);
 		}
