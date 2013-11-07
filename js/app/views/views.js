@@ -54,3 +54,32 @@ IK.StatTrioView = Ember.View.extend({
 		return arr;
 	}.property('values', 'character.model')
 });
+
+IK.LifeSpiralView = Ember.View.extend({
+	templateName: "life-spiral"
+});
+
+IK.LifeSpiralArmView = Ember.View.extend({
+	tagName: 'svg',
+	width: 200,
+	height: 200,
+	viewBox: "0 0 200 200",
+	version: '1.1',
+	xmlns: "http://www.w3.org/2000/svg",
+	attributeBindings: ['xmlns', 'width', 'height', 'viewBox', 'version'],
+	classNames: ['spiral-arm'],
+	didInsertElement: function () {
+		// Render the SVG
+		var max = this.get('stat');
+		var element = this.$();
+		console.log(max, element);
+		element.append(this.createDot());
+	},
+	createDot: function () {
+		var dot = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+		dot.setAttribute('cx', 50);
+		dot.setAttribute('cy', 50);
+		dot.setAttribute('r', 30);
+		return dot;
+	},
+});
