@@ -1,8 +1,3 @@
-// IK.InputView = Ember.TextField.extend({
-// });
-
-// Ember.Handlebars.helper('input', IK.InputView);
-
 IK.LinkToSheet = Ember.View.extend({
 	templateName: "link-to-sheet",
 	tagName: "li",

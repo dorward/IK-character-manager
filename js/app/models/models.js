@@ -2,7 +2,6 @@
 
 var has_word_characters = /\w/;
 
-// TODO: Add Ember-Data
 IK.Character = DS.Model.extend({
     name: DS.attr('string', {
         // Default value provided for the benefit of the `display_name` observer
@@ -29,52 +28,3 @@ IK.Character = DS.Model.extend({
     "arc": DS.attr('number'),
     "per": DS.attr('number')
 });
-
-IK.Character.FIXTURES = [
-	{
-		id: 1,
-		name: "Silus Murdoch",
-		player: "David",
-		race: "Human",
-		xp: 7,
-		archetype: "Skilled",
-        characteristics: "Silver Shield badge tatooed over heart",
-        sex: "Male",
-        faith: "Morrow",
-        weight: "140lbs",
-        height: "5'9\"",
-        careers: "Thief - Spy",
-        "phy": 1,
-        "spd": 2,
-        "str": 3,
-        "agi": 4,
-        "prw": 5,
-        "poi": 6,
-        "int": 7,
-        "arc": 8,
-        "per": 9
-	},
-	{
-		id: 2,
-		name: "Cobb Scarrow",
-		player: "David",
-		race: "Human",
-		xp: 4,
-		archetype: "Skilled",
-        characteristics: "Pencil Moustache",
-        sex: "Male",
-        faith: "Morrow",
-        weight: "120lbs",
-        height: "6'1\"",
-        careers: "Bounty Hunter - Pistoleer",
-        "phy": 9,
-        "spd": 8,
-        "str": 7,
-        "agi": 6,
-        "prw": 5,
-        "poi": 4,
-        "int": 3,
-        "arc": 2,
-        "per": 1
-	}
-];
