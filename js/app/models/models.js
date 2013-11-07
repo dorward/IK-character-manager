@@ -1,7 +1,5 @@
 /*globals IronKingdoms, Ember*/
 
-var has_word_characters = /\w/;
-
 IK.Character = DS.Model.extend({
     name: DS.attr('string', {
         // Default value provided for the benefit of the `display_name` observer

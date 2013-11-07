@@ -1,3 +1,5 @@
+var has_word_characters = /\w/;
+
 IK.LinkToSheet = Ember.View.extend({
 	templateName: "link-to-sheet",
 	tagName: "li",
