@@ -73,13 +73,15 @@ IK.LifeSpiralArmView = Ember.View.extend({
 		var max = this.get('stat');
 		var element = this.$();
 		console.log(max, element);
-		element.append(this.createDot());
+		for (var i = 0; i < max; i++) {
+			element.append(this.createDot(i));
+		}
 	},
-	createDot: function () {
+	createDot: function (index) {
 		var dot = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-		dot.setAttribute('cx', 50);
-		dot.setAttribute('cy', 50);
-		dot.setAttribute('r', 30);
+		dot.setAttribute('cx', 15 + 20 * index);
+		dot.setAttribute('cy', 10);
+		dot.setAttribute('r', 7);
 		return dot;
 	},
 });

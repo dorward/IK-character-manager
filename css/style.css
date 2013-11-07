@@ -48,3 +48,7 @@ html, body {
 label {
   display: inline-block;
   width: 8em; }
+
+/* debug */
+svg {
+  outline: solid blue 1px; }
